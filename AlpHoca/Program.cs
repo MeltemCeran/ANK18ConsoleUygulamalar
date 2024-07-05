@@ -1,4 +1,4 @@
-﻿namespace AlpHoca
+﻿namespace AlpHoca1
 {
     internal class Program
     {
