@@ -11,7 +11,7 @@
             Console.WriteLine("Lütfen ürün fiyatını giriniz:");
 
             fiyat = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"Ürünün kdv dahil fiyatı: {(fiyat * 20 / 100) + fiyat}");
+            Console.WriteLine($"Ürünün kdv dahil fiyatı: {fiyat * 1.20}");
 
             //2)Kenar uzunluğu verilen bir karenin alan ve çevresini hesaplayan programı yazınız.
 
@@ -32,14 +32,14 @@
             Console.WriteLine("Final sınav notunuzu giriniz: ");
             final = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine($"Sonuç: {(ara * 40 / 100) + (final * 60 / 100)}");
+            Console.WriteLine($"Sonuç: {(ara * 0.4) + (final * 0.6)}");
 
             //4)Klavyeden girilen celcius değerini fahrenheit'e çeviren programı yazınız.
 
             int celcius;
             Console.WriteLine("Lütfen sıcaklığı celcius değerinden yazınız:");
             celcius = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Fahrenheit: {celcius * 9 / 5 + 32}");
+            Console.WriteLine($"Fahrenheit: {celcius * 1.8 + 32}");
 
 
         }
