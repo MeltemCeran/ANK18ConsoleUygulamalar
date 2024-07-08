@@ -49,6 +49,42 @@ namespace AlpHoca3
             // ya da case(>-10 and <0 , <0) sayı1 sıfırdan küçük ve -10dan büyük sayı2 sıfırdan küçük
             // ya da case(>-10 and <0 , <0) when sayi !=88 
             //"when" switch dışındaki değişkenlerdir.
+
+
+            Console.WriteLine("Lütfen bir ay giriniz");
+            string ay = Console.ReadLine();
+
+            switch (ay)
+            {
+                case "ocak":
+                case "şubat":
+                case "aralık":
+                    Console.WriteLine("Kış");
+                    break;
+
+                case "mart" or "nisan" or "mayıs":
+                    Console.WriteLine("İlkbahar");
+                    break;
+                case "haziran" or "temmuz" or "ağustos":
+                    Console.WriteLine("Yaz");
+                    break;
+                case "eylül" or "ekim" or "kasım":
+                    Console.WriteLine("sonbahar");
+                    break;
+
+
+                    default :
+                    break;
+
+            }
+
+
+
+
+
+
+
+
         }
     }
 }
