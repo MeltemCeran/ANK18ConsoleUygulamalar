@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlpHoca1", "AlpHoca\AlpHoca
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ödev1", "Ödev1\Ödev1.csproj", "{D7B9AAF8-208B-4CC7-AE3C-218ADE8D172E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlpHoca2", "AlpHoca2\AlpHoca2.csproj", "{AD7E4081-8E21-4AA5-9AB7-073BDB6A1B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlpHoca2", "AlpHoca2\AlpHoca2.csproj", "{AD7E4081-8E21-4AA5-9AB7-073BDB6A1B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Odev2", "Odev2\Odev2.csproj", "{C7FDC7F0-B6CC-4FC5-9734-4926C727E330}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{AD7E4081-8E21-4AA5-9AB7-073BDB6A1B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD7E4081-8E21-4AA5-9AB7-073BDB6A1B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD7E4081-8E21-4AA5-9AB7-073BDB6A1B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7FDC7F0-B6CC-4FC5-9734-4926C727E330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7FDC7F0-B6CC-4FC5-9734-4926C727E330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7FDC7F0-B6CC-4FC5-9734-4926C727E330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7FDC7F0-B6CC-4FC5-9734-4926C727E330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
