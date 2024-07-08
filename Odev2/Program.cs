@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.Design;
+using System.Runtime.Intrinsics.X86;
 
 namespace Odev2
 {
@@ -43,7 +44,7 @@ namespace Odev2
             {
                 Console.WriteLine($"Sonuç: {sayi * 2}");
             }
-            else if (sayi % 2 == 0)
+            else
             {
                 Console.WriteLine($"Sonuç {sayi / 2}");
             }
@@ -62,24 +63,26 @@ namespace Odev2
 
             sayii = Convert.ToDouble(Console.ReadLine());
 
-            if (sayii <= 100 && sayi > 90)
+            if (sayii <= 100 && sayi >= 90)
             {
                 Console.WriteLine("Puanınız : A");
             }
-            else if (sayii <= 89 && sayii > 80)
+            else if (sayii <= 89 && sayii >= 80)
                 Console.WriteLine("Puanınız : B");
-            else if (sayii <= 79 && sayii > 70)
+            else if (sayii <= 79 && sayii >= 70)
                 Console.WriteLine("Puanınız : C");
-            else if (sayii <= 69 && sayii > 60)
+            else if (sayii <= 69 && sayii >= 60)
                 Console.WriteLine("Puanınız : D");
-            else if (sayii <= 59 && sayii > 0)
+            else if (sayii <= 59 && sayii >= 0)
                 Console.WriteLine("Puanınız : F");
+            else
+                Console.WriteLine("Geçersiz not.");
 
 
-            /*4)Kullanıcının girdiği üç kenar uzunluğunun, bir üçgen oluşturup oluşturmadığını kontrol eden programı yazınız. 
-             * İki kenarın toplam uzunluğu üçüncü kenardan büyük olmalıdır. 
-             * Eğer bu koşul sağlanıyorsa, üç kenar bir üçgen oluşturabilir. Aksi halde, oluşturamaz.
-             */
+            ///*4)Kullanıcının girdiği üç kenar uzunluğunun, bir üçgen oluşturup oluşturmadığını kontrol eden programı yazınız. 
+            // * İki kenarın toplam uzunluğu üçüncü kenardan büyük olmalıdır. 
+            // * Eğer bu koşul sağlanıyorsa, üç kenar bir üçgen oluşturabilir. Aksi halde, oluşturamaz.
+            // */
 
             double a, b, c;
 
@@ -96,9 +99,11 @@ namespace Odev2
             else
                 Console.WriteLine("Girdiğiniz değerler bir üçgen oluşturmaz");
 
-            /*5)Bir mağazadan alınan ürünün fiyatı 2500 TL ve üzerinde ise 75 TL olan kargo ücreti alınmamaktadır. 
-             * Ürünün fiyatı girildiğinde toplam ödenmesi gereken tutarı gösteren programı yazınız.
-             */
+
+
+            ///*5)Bir mağazadan alınan ürünün fiyatı 2500 TL ve üzerinde ise 75 TL olan kargo ücreti alınmamaktadır. 
+            // * Ürünün fiyatı girildiğinde toplam ödenmesi gereken tutarı gösteren programı yazınız.
+            // */
 
             double fiyat;
 
@@ -115,35 +120,32 @@ namespace Odev2
             }
 
 
-            /*6)Bir mağazada kampanya yapılmaktadır. Alınan 2 ürünün toplamı 3000 TL'den fazla olursa fiyatı düşük olan 
-             * üründen %25 indirim yapılmaktadır. (Eğer fiyatlar eşit ise herhangi birisinden %25 indirim olacaktır) 
-             * Bu bilgilere göre kullanıcı tarafından girilen 2 ürün fiyatına göre toplam yapılacak ödeme miktarını 
-             * hesaplayan programı yazınız.
-             */
+            ///*6)Bir mağazada kampanya yapılmaktadır. Alınan 2 ürünün toplamı 3000 TL'den fazla olursa fiyatı düşük olan 
+            // * üründen %25 indirim yapılmaktadır. (Eğer fiyatlar eşit ise herhangi birisinden %25 indirim olacaktır) 
+            // * Bu bilgilere göre kullanıcı tarafından girilen 2 ürün fiyatına göre toplam yapılacak ödeme miktarını 
+            // * hesaplayan programı yazınız.
+            // */
 
             double f1, f2;
             Console.WriteLine("Lütfen 2 ürünün de fiyatını giriniz:");
             f1 = Convert.ToDouble(Console.ReadLine());
             f2 = Convert.ToDouble(Console.ReadLine());
 
-            if (f1 + f2 > 3000 && f1 < f2)
+            if (f1 + f2 > 3000)
             {
-                f1 = f1 - (f1 * 0.25);
-                Console.WriteLine($"Ödeme toplamı: {f1 + f2}");
-            }
-            else if (f1 + f2 > 3000 && f2 < f1)
-            {
-                f2 = f2 - (f2 * 0.25);
-                Console.WriteLine($"Ödeme toplamı: {f2 + f1}");
-            }
-            else if (f1 + f2 > 3000 && f1 == f2)
-            {
-                f2 = f2 - (f2 * 0.25);
-                Console.WriteLine($"Ödeme toplamı: {f2 + f1}");
+                if (f1 <= f2)
+                {
+                    Console.WriteLine($"Ödeme toplamı: {f1 * 0.75 + f2}");
+                }
+                else
+                {
+                    Console.WriteLine($"Ödeme toplamı: {f2 * 0.75 + f1}");
+                }
+
             }
             else
             {
-                Console.WriteLine($"Ödeme toplamı: {f1 + f2}");
+                Console.WriteLine($"Ödeme toplamı: {f2 + f1}");
             }
 
 
@@ -154,18 +156,30 @@ namespace Odev2
              */
 
 
+            int number, e, f, g, h;
 
             Console.WriteLine("Lütfen 4 basamaklı bir sayı giriniz:");
-            string sayiii = Console.ReadLine();
 
-            if (sayi.Length = !4)
+            number = Convert.ToInt32(Console.ReadLine());
+
+            if ((number >= 1000 && number <= 9999) || (number >= -9999 && number <= -1000))
             {
-                Console.WriteLine("4 basamaklı bir sayı girmediniz.");
+                h = number % 10;
+                g = (number % 100) / 10;
+                f = (number % 1000) / 100;
+                e = number / 1000;
+
+                Console.WriteLine($" Basamaklar: {e}, {f}, {g}, {h}");
+
+                if (h == e && g == f)
+                {
+                    Console.WriteLine("Kurala uygundur");
+                }
+                else
+                    Console.WriteLine("Kurala uygun değildir");
             }
-
-            //bu soruyu yapamadım.
-
-
+            else
+                Console.WriteLine("4 basamaklı sayı girmediniz");
 
 
 
@@ -183,48 +197,40 @@ namespace Odev2
             {
                 Console.WriteLine("Sayılar birbirine eşittir");
             }
-
-            if (s2 > s1)
+            else if (s1 > s2)
             {
                 Console.WriteLine("S2 büyüktür");
             }
             else
                 Console.WriteLine("S1 büyüktür");
 
-            //8.1)soruyu<,>, <= ve >= operatörlerini KULLANMADAN yazınız. ( == KULLANILABİLİR)
-
-            int sayi1, sayi2, sonuc;
-
-            Console.WriteLine("Lütfen 2 sayı giriniz:");
-            sayi1 = Convert.ToInt32(Console.ReadLine());
-            sayi2 = Convert.ToInt32(Console.ReadLine());
 
 
             //9) Kullanıcı tarafından yazılan bir sayının İspanyolcasını ekrana yazan programı yazınız.
             //1 ise uno, 2 ise dos, 3 ise tres, 4 ise cuatro, 5 ise cinco, diğer durumlar "Otro numero" yazmalıdır.
 
 
-            int number;
+            int n;
             Console.WriteLine("Lütfen bir sayı yazınız");
-            number = Convert.ToInt32(Console.ReadLine());
+            n = Convert.ToInt32(Console.ReadLine());
 
-            if (number == 1)
+            if (n == 1)
             {
                 Console.WriteLine("Uno");
             }
-            else if (number == 2)
+            else if (n == 2)
             {
                 Console.WriteLine("Dos");
             }
-            else if (number == 3)
+            else if (n == 3)
             {
                 Console.WriteLine("Tres");
             }
-            else if (number == 4)
+            else if (n == 4)
             {
                 Console.WriteLine("Cuatro");
             }
-            else if (number == 5)
+            else if (n == 5)
             {
                 Console.WriteLine("Cinco");
             }
@@ -232,12 +238,6 @@ namespace Odev2
             {
                 Console.WriteLine("Otro numero");
             }
-
-
-
-
-
-
 
 
         }
