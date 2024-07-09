@@ -80,11 +80,6 @@ namespace AlpHoca3
 
 
 
-
-
-
-
-
         }
     }
 }
