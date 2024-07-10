@@ -1,14 +1,80 @@
 ﻿
 
+
 namespace Döngüler
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Görev1();
-            Görev2();
+            //Görev1();
+            //Görev2();
+            //Görev3();
+            //Görev4();
+            Görev5();
 
+            
+        }
+
+        private static void Görev5()
+        {
+            int en;
+            int boy;
+
+            Console.WriteLine("Lütfen bir uzunluk değeri giriniz:");
+            en = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Lütfen bir uzunluk değeri giriniz:");
+            boy = Convert.ToInt32(Console.ReadLine());
+
+
+            for (int i = 1; i <= en; i++)
+            {
+                for (int j = 1; j <= boy; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+           
+
+        }
+
+        private static void Görev4()
+        {
+            
+            int toplam = 0;
+            int adet = 0;
+
+            for (int i = 1; i < 1000; i++)
+            {
+                if (i % 5 == 0 && i % 7 != 0)
+                { 
+                    Console.WriteLine(i);
+                  toplam += i;
+                  adet++;
+                }
+            }
+            Console.WriteLine($"Sayıların toplamı: {toplam}");
+            Console.WriteLine($"Sayı adedi: {adet}");
+        }
+
+        private static void Görev3()
+        {
+            int adet = 12;
+            int toplam = 0;
+            int sayi = 0;   
+
+            for (int i = 0; i < adet; i++)
+            {
+                Console.WriteLine("Lütfen bir sayı giriniz:");
+                sayi = Convert.ToInt32(Console.ReadLine());
+                toplam = toplam + sayi;
+            }
+
+            Console.WriteLine($"Sayıların toplamı: {toplam}");
+            Console.WriteLine($"Sayıların ortalaması: {toplam / 12}");
         }
 
         private static void Görev2()
