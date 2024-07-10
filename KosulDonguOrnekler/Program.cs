@@ -12,8 +12,6 @@
             Soru5();
             //Soru6();
 
-
-
         }
 
         private static void Soru6()

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odev2", "Odev2\Odev2.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlpHoca3", "AlpHoca3\AlpHoca3.csproj", "{9681977D-DEC0-443B-8866-CAAC4A7B3CDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KosulDonguOrnekler", "KosulDonguOrnekler\KosulDonguOrnekler.csproj", "{5D7F80A8-7EEB-4528-89FF-5ECDD018BAD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KosulDonguOrnekler", "KosulDonguOrnekler\KosulDonguOrnekler.csproj", "{5D7F80A8-7EEB-4528-89FF-5ECDD018BAD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Döngüler", "Döngüler\Döngüler.csproj", "{F969EF87-A818-44B6-831A-7088323D96C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{5D7F80A8-7EEB-4528-89FF-5ECDD018BAD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D7F80A8-7EEB-4528-89FF-5ECDD018BAD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D7F80A8-7EEB-4528-89FF-5ECDD018BAD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F969EF87-A818-44B6-831A-7088323D96C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F969EF87-A818-44B6-831A-7088323D96C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F969EF87-A818-44B6-831A-7088323D96C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F969EF87-A818-44B6-831A-7088323D96C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
