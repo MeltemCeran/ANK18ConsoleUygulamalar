@@ -6,10 +6,10 @@
         {
 
             //Soru1();
-            Soru2();
+            //Soru2();
             //Soru3();
             //Soru4();
-            //Soru5();
+            Soru5();
             //Soru6();
 
 
@@ -79,7 +79,7 @@
 
             ort = ara * 0.40 + final * 0.60;
 
-            if ((ara < 0 || ara > 100) && (final < 0 || final > 100))
+            if (ara < 0 || ara > 100 || final < 0 || final > 100)
                 Console.WriteLine("Girdiğiniz değerler geçersizdir.");
 
             switch (ort)
@@ -99,7 +99,7 @@
                 case var x when ort >= 0 && ort <= 59:
                     Console.WriteLine("F");
                     break;
-                
+
 
             }
 
@@ -140,11 +140,10 @@
                     Console.WriteLine("Pazar");
                     break;
                 default:
+                    Console.WriteLine("Geçersiz giriş yaptınız.");
                     break;
 
             }
-
-
 
         }
 
@@ -159,18 +158,38 @@
             Console.WriteLine("Lütfen fiyatı giriniz:");
             fiyat = Convert.ToDouble(Console.ReadLine());
 
-            if (fiyat >= 300 && fiyat < 500)
+            //if (fiyat >= 300 && fiyat < 500)
 
-                Console.WriteLine($"Toplam ödeme: {fiyat * 0.90}");
+            //    Console.WriteLine($"Toplam ödeme: {fiyat * 0.90}");
 
-            else if (fiyat >= 500 && fiyat < 600)
+            //else if (fiyat >= 500 && fiyat < 600)
 
-                Console.WriteLine($"Toplam ödeme: {fiyat * 0.85}");
+            //    Console.WriteLine($"Toplam ödeme: {fiyat * 0.85}");
 
-            else if (fiyat >= 600)
+            //else if (fiyat >= 600)
 
-                Console.WriteLine($"Toplam ödeme: {fiyat * 0.80}");
+            //    Console.WriteLine($"Toplam ödeme: {fiyat * 0.80}");
 
+            //else
+            //    Console.WriteLine($"Toplam ödeme: {fiyat}");
+
+
+            switch (fiyat)
+            {
+                case var y when fiyat >= 300 && fiyat < 500:
+                    Console.WriteLine($"Toplam ödeme: {fiyat * 0.90}");
+                    break;
+                case var y when fiyat >= 500 && fiyat < 600:
+                    Console.WriteLine($"Toplam ödeme: {fiyat * 0.85}");
+                    break;
+                case >= 600:
+                    Console.WriteLine($"Toplam ödeme: {fiyat * 0.80}");
+                    break;
+                case < 300:
+                    Console.WriteLine($"Toplam ödeme: {fiyat}");
+                    break;
+
+            }
 
 
         }
@@ -199,7 +218,7 @@
             medeni = Convert.ToChar(Console.ReadLine());
 
             int cocuk;
-            
+
             Console.WriteLine("Lütfen çocuk sayısını giriniz:");
             cocuk = Convert.ToInt32(Console.ReadLine());
 
@@ -207,9 +226,9 @@
                 Console.WriteLine("Eksi değer girilemez");
 
             else if (medeni == 'E' || medeni == 'e' && cocuk == 0)
-            
+
                 Console.WriteLine($"Toplam: {maas * 1.03}");
-            
+
             else if (medeni == 'E' || medeni == 'e' && cocuk == 1)
                 Console.WriteLine($"Toplam: {maas * 1.05}");
 
