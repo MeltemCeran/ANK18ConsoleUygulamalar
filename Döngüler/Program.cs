@@ -17,7 +17,55 @@ namespace Döngüler
             //Görev8();
             //Görev9();
             //Görev10();
-            Görev11();
+            //Görev11();
+            Görev12();
+
+        }
+
+        private static void Görev12()
+        {
+
+            //int toplam = 1;
+
+            //Console.WriteLine("Lütfen bir sayı giriniz:");
+            //int sayi = Convert.ToInt32(Console.ReadLine());
+
+            //for (int i = 1; i <= sayi; i++)
+            //{
+            //    toplam = toplam * i;
+
+            //}
+            //Console.WriteLine($"Sonuç: {toplam}");
+
+            Console.WriteLine("----------------");
+
+            //int toplam = 1;
+            //int i = 1;
+
+            //Console.WriteLine("Lütfen bir sayı giriniz:");
+            //int sayi = Convert.ToInt32(Console.ReadLine());
+
+            //while (i <= sayi)
+            //{
+            //    toplam = toplam * i;
+            //        i++;
+            //}
+            //Console.WriteLine($"Sonuç: {toplam}");
+
+            Console.WriteLine("----------------");
+
+            double toplam = 1;
+            double i = 1;
+
+            Console.WriteLine("Lütfen bir sayı giriniz:");
+            double sayi = Convert.ToDouble(Console.ReadLine());
+
+            do
+            {
+                toplam = toplam * i;
+                      i++;
+            } while (i <= sayi);
+            Console.WriteLine($"Sonuç: {toplam}");
 
         }
 
