@@ -184,7 +184,7 @@ namespace Döngüler
 
         private static void Görev13()
         {
-            //Klavyeden girilen iki sayı arasındski sayıların toplamını while ile.
+            //Klavyeden girilen iki sayı arasındaki sayıların toplamını while ile.
 
             Console.WriteLine("Lütfen iki sayı giriniz:");
 
