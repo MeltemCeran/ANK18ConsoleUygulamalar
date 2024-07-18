@@ -1,5 +1,8 @@
 ﻿
 
+using System;
+using System.Threading.Channels;
+
 namespace ExceptionsMathStringDateMethods
 {
     internal class Program
@@ -11,13 +14,222 @@ namespace ExceptionsMathStringDateMethods
             //Soru1();
             //Soru2();
             //Soru3();
-            Soru4();
+            //Soru4();
             //Soru5();
             //Soru6();
             //Soru7();
             //Soru8();
             //Soru9();
-           
+            StringMetotlar();
+            //StringSoru1();
+            //StringSoru2();
+            //StringSoru3();
+            //StringSoru4();
+            //StringSoru5();
+            //StringSoru6();
+            //StringSoru7();
+            //DateTimeSoru8();
+            //DateTimeSoru9();
+            //DateTimeSoru10();
+            //DateTimeSoru11();
+            //DateTimeSoru12();
+
+
+
+
+        }
+
+        private static void DateTimeSoru12()
+        {
+            //Girilen iki tarih arasındaki gün farkını  bulan programı yazınız. 
+            //İPUCU: 2 datetime'ın farkını alıp TimeSpan türünde bir değişkene atayınız.
+            //Sonra o TimeSpan türündeki değşkenin toplam gün sayısını .TotalDays ile bulunuz.
+
+
+            DateTime tarih1;
+            DateTime tarih2;
+
+            Console.WriteLine("Bir tarih giriniz");
+
+            tarih1 = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine("Bir tarih giriniz");
+
+            tarih2 = Convert.ToDateTime(Console.ReadLine());
+
+            TimeSpan fark = tarih1 - tarih2;
+
+            Console.WriteLine(fark.TotalDays);
+        }
+
+        private static void DateTimeSoru11()
+        {
+            //Kullanıcıdan alınan doğum tarihi bilgisi ile kullanıcının yaşını hesaplayan program.
+            //Year yazarak tarihin yılını bulabiliriz.
+
+            DateTime dogumTarihi;
+
+            Console.WriteLine("Doğum tarihinizi giriniz:");
+
+            dogumTarihi = Convert.ToDateTime(Console.ReadLine());
+
+            Console.WriteLine(DateTime.Now.Year - dogumTarihi.Year);
+        }
+
+        private static void DateTimeSoru10()
+        {
+            //Ekrana sistemin anlık zaman 18 Temmuz 2024 15:26 şeklinde yazdırınız. İPUCU: ToLongDateString();
+
+            DateTime now = DateTime.Now;
+
+            Console.WriteLine($"{now.ToLongDateString()} , {now.ToShortTimeString()}");
+        }
+
+        private static void DateTimeSoru9()
+        {
+            //Ekrana sistemin anlık zaman ve saat bilgisini gg.aa.yyyy gün formatında yazan program.
+
+            DateTime now = DateTime.Now;
+
+            Console.WriteLine($"{now.ToShortDateString()}");
+        }
+
+        private static void DateTimeSoru8()
+        {
+            //Şimdiyi yazdır. 
+
+
+            DateTime now = DateTime.Now;
+
+            Console.WriteLine($"{now.ToLongDateString()} , {now.ToLongTimeString()}");
+
+            Console.WriteLine($"{now.ToShortDateString()} , {now.ToShortTimeString()}");
+
+        }
+
+        private static void StringSoru7()
+        {
+            //Kullanıcı tarafından girilen bir cümle içerisinde, yine kullanıcı tarafından yazılan bir kelimeyi 
+            //cümlede bulup, yerine yine kullanıcı tarafından girilen yeni bir kelime ile değiştiren programı yazınız.
+            //İPUCU: Replace()
+
+            string metin;
+            Console.WriteLine("Lütfen bir cümle giriniz");
+            metin = Console.ReadLine();
+
+            string kelime;
+            Console.WriteLine("Lütfen değiştirmek istediğiniz kelimeyi yazınız:");
+            kelime = Console.ReadLine();
+
+            string kelime2;
+            Console.WriteLine("Yerine hangi kelimeyi koymak istiyorsunuz?");
+            kelime2 = Console.ReadLine();
+
+            Console.WriteLine(metin.Replace(kelime,kelime2));
+
+        }
+
+        private static void StringSoru6()
+        {
+            //Girilen bir kelimenin bütün harflerinin büyük harf ve daha sonra bütün harflerinin
+            //küçük harf olacak şekilde ayrı ayrı ekrana yazdıran programı yazınız. ToUpper() ve ToLower()
+
+            string k1= "meLteM";
+
+            Console.WriteLine(k1.ToUpper());
+            Console.WriteLine(k1.ToLower());
+            Console.WriteLine(k1);
+
+
+        }
+
+        private static void StringSoru5()
+        {
+            //Kullanıcıdan alının ad,soyad ve yaş bilgilerini "benim adım ..... soyadım ...... ve yaşım .....'tır" 
+            //şeklinde ekranda gösteren programı yazınız.İPUCU: +, String.Concat()
+
+            Console.Write("Lütfen adınızı giriniz:");
+            string ad = Console.ReadLine();
+
+            Console.Write("Lütfen soyadınızı giriniz:");
+            string soyad = Console.ReadLine();
+
+            Console.Write("Lütfen yaşınızı giriniz:");
+            string yaş = Console.ReadLine();
+
+            Console.WriteLine(String.Concat($"Benim adım {ad}, soyadım {soyad}, yaşım {yaş}"));
+
+        }
+
+        private static void StringSoru4()
+        {
+            //Bir string ifade içerisinde kullanıcının girmiş olduğu karakteri arayan programı yazınız.
+            //Arama: Aranan karakterin string içerisinde hangi İNDİSTE OLDUĞU anlamına gelmektedir.
+            //İPUCU: IndexOf()
+
+            string word = "Bu kekler neli?";
+            Console.WriteLine(word.IndexOf('e'));
+            Console.WriteLine(word.LastIndexOf('e'));
+
+
+        }
+
+        private static void StringSoru3()
+        {
+
+            //Kullanıcı tarafından girilen kelimenin sağındaki ve solundaki boşlukları temizleyen programı yazınız.
+
+            string kelime;
+
+            Console.Write("Lütfen bir kelime giriniz:");
+
+            kelime = Console.ReadLine();
+
+            Console.WriteLine("*" + kelime.Trim() + "*");
+            Console.WriteLine("*" + kelime + "*");
+        }
+
+        private static void StringSoru2()
+        {
+
+            ////Kullanıcının girmiş olduğu iki metinsel ifadeyi karşılaştıran eşleşme durumunu gösteren
+            ////programı yazınız. (kelimelerin eşit olup olmadığını bulunuz. 
+
+            string m1;
+            string m2;
+
+            Console.Write("Lütfen bir kelime giriniz:");
+
+            m1 = Console.ReadLine();
+
+            Console.Write("Lütfen bir kelime giriniz:");
+
+            m2 = Console.ReadLine();
+
+            Console.WriteLine(String.Compare(m1, m2,true));
+        }
+
+        private static void StringSoru1()
+        {
+            //Kullanıcının girmiş olduğu cümlede hava kelimesini arayan programı yazınız.
+
+            string metin = "Bugün çok güzel.";
+
+            if (metin.Contains("hava"))
+            {
+                Console.WriteLine("varmış");
+            }
+            else
+                Console.WriteLine("yokmuş");
+        }
+
+        private static void StringMetotlar()
+        {
+
+
+            //Bunu başlık gibi kullanıyorum. 
+
+            Console.WriteLine("Burası başlık gibi");
 
 
 
@@ -53,7 +265,7 @@ namespace ExceptionsMathStringDateMethods
                 Console.WriteLine(ex); ;
             }
 
-            
+
         }
 
         private static void Soru7()
@@ -103,9 +315,9 @@ namespace ExceptionsMathStringDateMethods
             {
                 Console.WriteLine("Lütfen bir sayı giriniz:");
                 int sayi = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine(Math.Pow(sayi, 1/3.0));
+                Console.WriteLine(Math.Pow(sayi, 1 / 3.0));
             }
-            
+
             catch (Exception ex)
             {
 
@@ -180,7 +392,7 @@ namespace ExceptionsMathStringDateMethods
                 int sayi = Convert.ToInt32(Console.ReadLine());
                 int us = Convert.ToInt32(Console.ReadLine());
 
-                Console.WriteLine($"Sonuc : {Math.Pow(sayi,us)}");
+                Console.WriteLine($"Sonuc : {Math.Pow(sayi, us)}");
             }
             catch (Exception ex)
             {
