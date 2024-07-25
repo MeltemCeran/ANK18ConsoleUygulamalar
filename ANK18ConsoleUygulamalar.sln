@@ -19,7 +19,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Döngüler", "Döngüler\D�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ödev3", "Ödev3\Ödev3.csproj", "{5F4B94D7-EAD0-47DB-B2B3-BDB4D60ECFA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionsMathStringDateMethods", "ExceptionsMathStringDateMethods\ExceptionsMathStringDateMethods.csproj", "{03145B64-D516-4867-AF6E-BDDF19011125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionsMathStringDateMethods", "ExceptionsMathStringDateMethods\ExceptionsMathStringDateMethods.csproj", "{03145B64-D516-4867-AF6E-BDDF19011125}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odev4", "Odev4\Odev4.csproj", "{F9D2F489-6070-4363-A695-9E9B1FFBF95C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Odev5", "Odev5\Odev5.csproj", "{BD4DD34B-E20F-4496-BAC4-F1C9F2D63338}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetotOrnekler", "MetotOrnekler\MetotOrnekler.csproj", "{16BD4EAF-3C18-466E-9C0B-1DD17DA9FF3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodUygulamalar", "MetodUygulamalar\MetodUygulamalar.csproj", "{9BC6DB8D-0143-44BD-B86A-28803FC2F353}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +71,22 @@ Global
 		{03145B64-D516-4867-AF6E-BDDF19011125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03145B64-D516-4867-AF6E-BDDF19011125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03145B64-D516-4867-AF6E-BDDF19011125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D2F489-6070-4363-A695-9E9B1FFBF95C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D2F489-6070-4363-A695-9E9B1FFBF95C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D2F489-6070-4363-A695-9E9B1FFBF95C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D2F489-6070-4363-A695-9E9B1FFBF95C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4DD34B-E20F-4496-BAC4-F1C9F2D63338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4DD34B-E20F-4496-BAC4-F1C9F2D63338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4DD34B-E20F-4496-BAC4-F1C9F2D63338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4DD34B-E20F-4496-BAC4-F1C9F2D63338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16BD4EAF-3C18-466E-9C0B-1DD17DA9FF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16BD4EAF-3C18-466E-9C0B-1DD17DA9FF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16BD4EAF-3C18-466E-9C0B-1DD17DA9FF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16BD4EAF-3C18-466E-9C0B-1DD17DA9FF3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BC6DB8D-0143-44BD-B86A-28803FC2F353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BC6DB8D-0143-44BD-B86A-28803FC2F353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BC6DB8D-0143-44BD-B86A-28803FC2F353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BC6DB8D-0143-44BD-B86A-28803FC2F353}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

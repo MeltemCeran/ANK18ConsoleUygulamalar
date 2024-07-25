@@ -74,6 +74,10 @@ namespace ExceptionsMathStringDateMethods
             dogumTarihi = Convert.ToDateTime(Console.ReadLine());
 
             Console.WriteLine(DateTime.Now.Year - dogumTarihi.Year);
+
+            string m = "selam merhaba";
+
+           
         }
 
         private static void DateTimeSoru10()
